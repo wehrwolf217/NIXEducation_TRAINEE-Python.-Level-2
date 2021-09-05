@@ -2,6 +2,7 @@
 """Написать свой декоратор, который будет отлавливать ошибки, полученные в
 ходе выполнения обёрнутой функции, логгировать их и делать raise отловленной ошибки"""
 import sys
+from time import asctime
 
 
 def log_errors(func):
@@ -10,7 +11,7 @@ def log_errors(func):
             return func(*args, **kwargs)
         except Exception as e:
             exc_type, value, traceback = sys.exc_info()
-            log_file_content = f'{func.__name__}, {exc_type} {e}\n'
+            log_file_content = f'{asctime()} - {func.__name__}, {exc_type} {e}\n'
             with open('errors.log', 'a', encoding='utf8') as file:
                 file.write(log_file_content)
             raise
