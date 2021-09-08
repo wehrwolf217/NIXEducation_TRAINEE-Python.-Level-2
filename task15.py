@@ -6,7 +6,7 @@ import abc
 from abc import ABC
 
 
-class Animal:
+class Animal(ABC):
     """abstract class"""
 
     def __init__(self):
@@ -26,7 +26,7 @@ class Animal:
         return 'abs method jump'
 
 
-class Cat(Animal, ABC):
+class Cat(Animal):
     def __init__(self, name):
         super().__init__()
         self.name = name
@@ -41,7 +41,7 @@ class Cat(Animal, ABC):
         return f'Cat {self.name} is jumping'
 
 
-class Dog(Animal, ABC):
+class Dog(Animal):
     def __init__(self, name):
         super().__init__()
         self.name = name

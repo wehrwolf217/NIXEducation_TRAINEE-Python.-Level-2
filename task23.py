@@ -6,8 +6,6 @@ import unittest
 
 
 class TestFunc_for_task23(unittest.TestCase):
-    def setUp(self):
-        pass
 
     def test_swap(self):
         self.assertEqual(swap("abcd"), 'cdab')
@@ -25,9 +23,6 @@ class TestFunc_for_task23(unittest.TestCase):
 
     def test_average_2(self):
         self.assertEqual(type(average(2, 4, 6)), float)
-
-    def tearDown(self):
-        pass
 
 
 if __name__ == '__main__':
