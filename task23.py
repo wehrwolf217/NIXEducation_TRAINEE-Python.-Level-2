@@ -2,7 +2,6 @@ from func_for_task23 import swap, average
 
 import unittest
 
-""" я наверно не понял задание или ненашел требований к этим функциям"""
 
 
 class TestFunc_for_task23(unittest.TestCase):
